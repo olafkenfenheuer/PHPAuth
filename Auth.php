@@ -553,7 +553,8 @@ VALUES (:uid, :hash, :expiredate, :ip, :agent, :cookie_crc)
         }
 
         if ($ip != $db_ip) {
-            return false;
+		//allow changing IP
+            //return false;
         }
 
         if ($db_cookie == sha1($hash . $this->config->site_key)) {
