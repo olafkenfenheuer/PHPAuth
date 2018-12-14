@@ -2,6 +2,7 @@
 
 namespace PHPAuth;
 
+
 /**
  * PHPAuth Config class
  */
