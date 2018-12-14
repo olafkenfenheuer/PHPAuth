@@ -285,6 +285,8 @@ class Config
 
         // others
         $this->repairConfigValue('allow_concurrent_sessions', false);
+        $this->repairConfigValue('allow_concurrent_ip_per_session', false);
+        
 	}
 
     /**

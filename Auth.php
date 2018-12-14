@@ -552,9 +552,9 @@ VALUES (:uid, :hash, :expiredate, :ip, :agent, :cookie_crc)
             return false;
         }
 
-        if ($ip != $db_ip) {
+        if ($ip != $db_ip & !$this->config->allow_concurrent_ip_per_session) {
 		//allow changing IP
-            //return false;
+            return false;
         }
 
         if ($db_cookie == sha1($hash . $this->config->site_key)) {
