@@ -62,13 +62,14 @@ class Auth/* implements AuthInterface */ {
 
         $this->dbh = $dbh;
         $this->config = $config;
-
+/*
         if ($dirh) {
             while (($dirElement = readdir($dirh)) !== false) {
                 
             }
             closedir($dirh);
         }
+	*/
         $this->recaptcha_config = $this->config->recaptcha;
         $this->messages_dictionary = $this->config->dictionary;
 
